@@ -1,0 +1,267 @@
+.page-feature {
+  position: relative;
+  height: 40vh;
+  min-height: 250px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: #333;
+  background-position: center bottom;
+  background-size: cover;
+
+  color: #fff;
+
+  @include breakpoint(xlarge) {
+
+    &.small {
+      height: 70vh;
+    }
+
+    &.medium {
+      height: 90vh;
+    }
+
+  }
+
+
+
+
+
+  .page-feature-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    z-index: 20;
+  }
+
+  @include breakpoint(xlarge) {
+    height: 100vh;
+    min-height: 500px;
+    background-attachment: fixed;
+  }
+
+  .page-feature-content {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    color: #fff;
+    @include mui-animation(fade(0, 100));
+    animation-duration: 2s;
+
+    h1 {
+      color: $white;
+      font-size: 3rem;
+      position: relative;
+      display: inline-block;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-shadow: 0px 0px 2px rgba(0,0,0,0.22);
+
+      &:before {
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        top: 0;
+        width: 200px;
+        height: 3px;
+        background-color: $primary-color;
+        content: ""
+      }
+
+      &:after {
+        position: absolute;
+        left: 50%;
+        margin-left: -100px;
+        bottom: 0;
+        width: 200px;
+        height: 3px;
+        background-color: $primary-color;
+        content: ""
+      }
+
+      @include breakpoint(xlarge) {
+        font-size: 7rem;
+      }
+
+    }
+
+    a {
+      border-bottom: none;
+    }
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+.featured-links {
+  margin-bottom: 3rem;
+
+  .button-group {
+    @include button-group-stack('.button');
+    @include breakpoint(xlarge) {
+      @include button-group-expand('.button');
+    }
+  }
+}
+
+.hero-video {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-video-container,
+.hero-video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.video-controls {
+  position: absolute;
+  right: 5vh;
+  bottom: 3vh;
+}
+
+.hero-video-container {
+  display: none;
+
+  @include breakpoint(xlarge) {
+    display: block;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .hero-video-container {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .hero-video-container {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+// Featured - Slideshow
+
+.featured-slideshow {
+  height: 100%;
+
+  .owl-stage-outer {
+    height: 100%;
+
+    .owl-stage {
+      height: 100%;
+
+      .owl-item {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.featured-slide {
+  height: 100%;
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-color: #333;
+  background-position: center center;
+  background-size: cover;
+  @include breakpoint(xlarge) {
+    .feature-slide-content {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      margin: 0 auto;
+      z-index: 20;
+    }
+  }
+
+  .featured-slide-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    margin: 0 auto;
+    z-index: 20;
+    color: #fff;
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.featured-slideshow {
+  .owl-dots {
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    z-index: 100;
+    text-align: center;
+    width: 100%;
+
+    .owl-dot {
+      background-color: #fff;
+      width: 20px;
+      height: 20px;
+      margin: 0 3px;
+
+      &.active {
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  .owl-nav {
+    button.owl-next,
+    button.owl-prev {
+      position: absolute;
+      top: 50%;
+      font-size: 30px;
+      background-color: #fff;
+      color: #333;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      margin-top: -25px;
+    }
+
+    button.owl-prev {
+      left: 20px;
+    }
+
+    button.owl-next {
+      right: 20px;
+    }
+  }
+}
+
+
+.w-intro {
+
+  .page-feature-content {
+    top: 40%;
+  }
+
+}

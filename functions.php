@@ -29,6 +29,7 @@ require_once( 'library/navigation.php' );
 /** Add menu walkers for top-bar and off-canvas */
 require_once( 'library/class-foundationpress-top-bar-walker.php' );
 require_once( 'library/class-foundationpress-mobile-walker.php' );
+require_once( 'library/class-foundationpress-sidebar-walker.php' );
 
 /** Create widget areas in sidebar and footer */
 require_once( 'library/widget-areas.php' );
@@ -56,3 +57,5 @@ require_once( 'library/gutenberg.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
 // require_once( 'library/class-foundationpress-protocol-relative-theme-assets.php' );
+
+add_theme_support( 'post-formats', array( 'aside', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video', 'audio', 'UCIBrand' ) );

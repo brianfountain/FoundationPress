@@ -42,7 +42,7 @@ function foundationpress_adjust_image_sizes_attr( $sizes, $size ) {
 	$width = $size[0];
 
 	// Full width page template
-	if ( is_page_template( 'page-templates/page-full-width.php' ) ) {
+	if ( is_page_template( 'page-templates/page-container.php' ) ) {
 		if ( 1200 < $width ) {
 			$sizes = '(max-width: 1199px) 98vw, 1200px';
 		} else {

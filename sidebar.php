@@ -8,5 +8,6 @@
 
 ?>
 <aside class="sidebar">
-	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
+	<?php foundationpress_sidebar_t(); ?>
+	<?php dynamic_sidebar( 'sidebar-widgets' ); ?> 
 </aside>

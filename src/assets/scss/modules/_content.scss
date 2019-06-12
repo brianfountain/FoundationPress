@@ -36,7 +36,7 @@
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(8);
+      @include xy-cell(auto);
     }
   }
 
@@ -46,9 +46,18 @@
     }
 
     @include breakpoint(medium) {
-      @include xy-cell(4);
+      max-width: 400px;
+      //@include xy-cell(4);
       margin-top: 1rem;
     }
 
   }
+}
+
+.responsive-img {
+  min-width: 100%;
+}
+
+.section {
+  overflow: hidden;
 }

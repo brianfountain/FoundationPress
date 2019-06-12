@@ -1,0 +1,15 @@
+.top-bar {
+    //background: $primary-color;
+    background: black;
+}
+
+.site-desktop-title {
+    max-width: 150px;
+    padding: 1rem;
+}
+
+.site-header{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
